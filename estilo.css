@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #f8c3c3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.8s ease;
+}
+
+.nav-links a:hover {
+    color: #f4f4f4;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 8px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+/* Seção Principal */
+main {
+    flex: 1;
+    padding: 2rem;
+    padding-top: 5rem; /* Espaço para a navbar fixa */
+}
+
+section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+section h1, section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+section p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Estilo das Imagens */
+img {
+    max-width: 25%; /* Ajusta a largura da imagem para não ultrapassar a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço embaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem se necessário */
+}
+
+.imagem-home, .imagem-perfil {
+    margin-top: 1rem; /* Espaço acima da imagem */
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
